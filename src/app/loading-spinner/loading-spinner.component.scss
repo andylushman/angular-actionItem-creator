@@ -1,0 +1,22 @@
+
+:host {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loader {
+  border-style: solid;
+  border-color: var(--color-divider);
+  border-top-color: var(--color-echometer-green);
+  border-radius: 50%;
+}
+
+.rotate {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

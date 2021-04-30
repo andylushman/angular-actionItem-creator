@@ -1,0 +1,63 @@
+@import "reset";
+@import "fonts";
+
+/* Color definitions */
+:root {
+  --color-background-closest: white;
+  --color-background-closer: hsl(212, 10%, 98%);
+  --color-background-further: hsl(212, 10%, 95%);
+  --color-background-furthest: hsl(212, 10%, 92%);
+
+  --color-divider: hsla(0, 0%, 0%, 0.12);
+  --color-hover-tint: hsla(0, 0%, 0%, .05);
+
+  --color-text-primary: hsla(0, 0%, 0%, 0.87);
+  --color-text-secondary: hsla(0, 0%, 0%, 0.54);
+  --color-text-disabled-hint: hsla(0, 0%, 0%, 0.38);
+
+  --color-echometer-green: hsl(101, 97%, 36%);
+
+  --color-blue-100: hsl(208, 100%, 97%);
+  --color-blue-200: hsl(206, 90%, 92%);
+  --color-blue-300: hsl(209, 85%, 84%);
+  --color-blue-400: hsl(211, 84%, 75%);
+  --color-blue-500: hsl(212, 84%, 65%);
+  --color-blue-600: hsl(214, 84%, 56%);
+  --color-blue-700: hsl(216, 72%, 47%);
+  --color-blue-800: hsl(211, 80%, 35%);
+  --color-blue-900: hsl(216, 85%, 23%);
+
+  --color-red-100: hsl(8, 100%, 97%);
+  --color-red-200: hsl(6, 96%, 89%);
+  --color-red-300: hsl(5, 93%, 78%);
+  --color-red-500: hsl(5, 69%, 54%);
+  --color-red-700: hsl(5, 83%, 37%);
+  --color-red-900: hsl(0, 100%, 14%);
+}
+
+:root {
+  @include font-lato-regular;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-background-furthest);
+  color: var(--color-text-primary);
+  @include font-lato-regular;
+  margin: 0;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  &.no-scroll {
+    overflow: hidden;
+  }
+}
+
+button {
+  cursor: pointer;
+}

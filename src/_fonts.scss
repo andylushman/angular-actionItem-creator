@@ -1,0 +1,33 @@
+$font-nunito: "Nunito", sans-serif;
+
+@mixin font-nunito-light {
+  font-family: $font-nunito;
+  font-weight: 300;
+}
+@mixin font-nunito-regular {
+  font-family: $font-nunito;
+  font-weight: 400;
+}
+@mixin font-nunito-semibold {
+  font-family: $font-nunito;
+  font-weight: 600;
+}
+@mixin font-nunito-bold {
+  font-family: $font-nunito;
+  font-weight: 700;
+}
+
+$font-lato: "Lato", sans-serif;
+
+@mixin font-lato-light {
+  font-family: $font-lato;
+  font-weight: 300;
+}
+@mixin font-lato-regular {
+  font-family: $font-lato;
+  font-weight: 400;
+}
+@mixin font-lato-semibold {
+  font-family: $font-lato;
+  font-weight: 700;
+}

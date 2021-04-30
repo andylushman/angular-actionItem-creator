@@ -1,0 +1,40 @@
+@import "../fonts";
+
+:host {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  grid-gap: 16px;
+  padding: 48px;
+  justify-items: center;
+}
+
+.ai-selector {
+  display: flex;
+  flex-direction: row;
+
+  * + * {
+    margin-left: 12px;
+  }
+
+  button {
+    padding: 4px 12px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    @include font-nunito-semibold;
+    font-size: 20px;
+    color: var(--color-blue-700);
+
+
+
+    &:hover {
+      background: var(--color-hover-tint);
+    }
+
+    &.selected {
+      border-color: var(--color-blue-700)
+    }
+  }
+}

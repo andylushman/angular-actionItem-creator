@@ -1,0 +1,18 @@
+
+<ng-container *ngIf="actionItems$ | async as items; else loading">
+  <div class="ai-selector">
+    <button
+      *ngFor="let ai of items; let i = index"
+      (click)="shownAiIndex = i"
+      [class.selected]="shownAiIndex === i"
+    >
+      {{i}}
+    </button>
+  </div>
+  <!-- TODO: replace JSON dump with component that displays and allows to edit the selected Action Item -->
+  {{ items[shownAiIndex] | json }}
+</ng-container>
+
+<ng-template #loading>
+  <app-loading-spinner></app-loading-spinner>
+</ng-template>
