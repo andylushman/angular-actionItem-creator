@@ -1,11 +1,14 @@
-<div class="action-item">
+<div class="action-item" [ngClass]="{'action-item-status-open': item.status === 'open', 'action-item-status-done' : item.status === 'done', 'action-item-status-discarded' : item.status === 'discarded' }">
   <h1 class="action-item-title">{{item.title}}</h1>
   <div class="action-item-details">
     {{item.details}}
   </div>
   <div>
     <div class="action-item-responsible">Responsible</div>
-    <button class="action-item-assignee">{{item.assignee.name}}</button>
+    <button *ngIf="item.assignee; else addAssignee" class="action-item-assignee">{{item.assignee.name}}</button>
+    <ng-template #addAssignee>
+      <button class="action-item-add-assignee">Add Assignee</button>
+    </ng-template>
   </div>
   <app-linked-element-dropdown></app-linked-element-dropdown>
   <button class="action-item-delete-button">Delete</button>

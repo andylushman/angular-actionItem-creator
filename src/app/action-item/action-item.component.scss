@@ -3,10 +3,21 @@
 
 .action-item {
   @include font-nunito-regular;
-  max-width: 480px;
+  width: 480px;
   background: var(--color-background-closer);
   border-radius: 8px;
   padding: 16px;
+
+  &-status {
+    &-open,
+    &-done {
+      border-left: 5px solid var(--color-blue-700);
+    }
+
+    &-discarded {
+      border-left: 5px solid var(--color-border-dark);
+    }
+  }
 
   &-title {
     font-size: 24px;
@@ -21,13 +32,18 @@
     margin-bottom: 8px;
   }
 
-  &-assignee {
+  &-assignee,
+  &-add-assignee {
     background: var(--color-background-further)
       url(../../assets/avatar-icon.svg) 6px 6px no-repeat;
     border: 1px solid var(--color-divider);
     border-radius: 25px;
     padding: 10px 10px 10px 36px;
     margin-bottom: 24px;
+  }
+
+  &-add-assignee {
+    background-color: var(--color-blue-600);
   }
 
   &-delete-button {

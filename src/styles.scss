@@ -8,8 +8,10 @@
   --color-background-further: hsl(212, 10%, 95%);
   --color-background-furthest: hsl(212, 10%, 92%);
 
+  --color-border-dark: hsl(0, 0%, 61%);
+
   --color-divider: hsla(0, 0%, 0%, 0.12);
-  --color-hover-tint: hsla(0, 0%, 0%, .05);
+  --color-hover-tint: hsla(0, 0%, 0%, 0.05);
 
   --color-text-primary: hsla(0, 0%, 0%, 0.87);
   --color-text-secondary: hsla(0, 0%, 0%, 0.54);
@@ -39,7 +41,8 @@
   @include font-lato-regular;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
