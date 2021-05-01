@@ -1,4 +1,4 @@
 <div class="toggle-element">
-  <button class="toggle-element-button" (click)="showText=!showText">Linked Element</button>
-  <div *ngIf="showText">{{toggledElement}}</div>
+  <button class="toggle-element-button" [ngClass]="{'toggle-element-button-opened': showText}" (click)="showText=!showText">Linked Element</button>
+  <div class="toggle-element-text" *ngIf="showText">{{toggledElement}}</div>
 </div>

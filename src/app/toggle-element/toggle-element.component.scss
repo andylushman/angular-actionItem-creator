@@ -2,10 +2,22 @@
   margin-bottom: 8px;
   &-button {
     width: 100%;
-    padding: 8px;
+    padding: 12px 12px 12px 32px;
+    background: url(../../assets/arrow-right.png) 6px 6px no-repeat;
     &:hover {
-      background: var(--color-hover-tint);
+      background-color: var(--color-hover-tint);
       border-radius: 4px;
     }
+    &-opened {
+      background: url(../../assets/arrow-down.png) 6px 6px no-repeat;
+      background-color: var(--color-hover-tint);
+    }
+  }
+
+  &-text {
+    margin-top: 4px;
+    padding: 12px;
+    border: 1px solid var(--color-background-furthest);
+    border-radius: 4px;
   }
 }
