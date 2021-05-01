@@ -11,7 +11,5 @@ export class ActionItemComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {
-    console.log(this.item);
-  }
+  ngOnInit(): void {}
 }

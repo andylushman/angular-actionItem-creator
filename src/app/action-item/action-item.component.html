@@ -1,4 +1,12 @@
 <div class="action-item" [ngClass]="{'action-item-status-open': item.status === 'open', 'action-item-status-done' : item.status === 'done', 'action-item-status-discarded' : item.status === 'discarded' }">
+  <div *ngIf="item.status === 'done'" class="action-item-status-icon action-item-status-icon-done">
+    <div class="action-item-status-icon-done-check">
+      &#x2713;
+    </div>
+  </div>
+  <div *ngIf="item.status === 'discarded'" class="action-item-status-icon action-item-status-icon-discarded">
+   	&#10010;
+  </div>
   <h1 class="action-item-title">{{item.title}}</h1>
   <div class="action-item-details">
     {{item.details}}

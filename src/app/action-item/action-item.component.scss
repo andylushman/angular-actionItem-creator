@@ -1,11 +1,13 @@
 @import "../../fonts";
 
 .action-item {
+  position: relative;
   @include font-nunito-regular;
   width: 480px;
   background: var(--color-background-closer);
   border-radius: 8px;
   padding: 16px;
+  overflow: hidden;
 
   &-status {
     &-open,
@@ -15,6 +17,26 @@
 
     &-discarded {
       border-left: 5px solid var(--color-border-dark);
+    }
+
+    &-icon {
+      position: absolute;
+      top: -9px;
+      right: -22px;
+      transform: rotate(45deg);
+      padding: 15px 27px 5px;
+
+      &-done {
+        background: var(--color-echometer-green);
+
+        &-check {
+          transform: rotate(-45deg);
+        }
+      }
+
+      &-discarded {
+        background: var(--color-border-dark);
+      }
     }
   }
 
