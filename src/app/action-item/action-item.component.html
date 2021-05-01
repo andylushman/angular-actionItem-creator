@@ -1,0 +1,12 @@
+<div class="action-item">
+  <h1 class="action-item-title">{{item.title}}</h1>
+  <div class="action-item-details">
+    {{item.details}}
+  </div>
+  <div>
+    <div class="action-item-responsible">Responsible</div>
+    <button class="action-item-assignee">{{item.assignee.name}}</button>
+  </div>
+  <app-linked-element-dropdown></app-linked-element-dropdown>
+  <button class="action-item-delete-button">Delete</button>
+</div>

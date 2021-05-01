@@ -1,0 +1,38 @@
+@import "../../fonts";
+@import "../../styles";
+
+.action-item {
+  @include font-nunito-regular;
+  max-width: 480px;
+  background: var(--color-background-closer);
+  border-radius: 8px;
+  padding: 16px;
+
+  &-title {
+    font-size: 24px;
+  }
+
+  &-details {
+    margin: 24px 0;
+  }
+
+  &-responsible {
+    @include font-nunito-light;
+    margin-bottom: 8px;
+  }
+
+  &-assignee {
+    background: var(--color-background-further)
+      url(../../assets/avatar-icon.svg) 6px 6px no-repeat;
+    border: 1px solid var(--color-divider);
+    border-radius: 25px;
+    padding: 10px 10px 10px 36px;
+    margin-bottom: 24px;
+  }
+
+  &-delete-button {
+    margin-top: 16px;
+    width: 100%;
+    text-align: right;
+  }
+}

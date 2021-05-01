@@ -9,8 +9,9 @@
       {{i}}
     </button>
   </div>
-  <!-- TODO: replace JSON dump with component that displays and allows to edit the selected Action Item -->
-  {{ items[shownAiIndex] | json }}
+  <app-action-item
+    [item]="items[shownAiIndex]"
+  ></app-action-item>
 </ng-container>
 
 <ng-template #loading>
