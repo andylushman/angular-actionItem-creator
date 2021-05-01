@@ -1,0 +1,11 @@
+.toggle-element {
+  margin-bottom: 8px;
+  &-button {
+    width: 100%;
+    padding: 8px;
+    &:hover {
+      background: var(--color-hover-tint);
+      border-radius: 4px;
+    }
+  }
+}

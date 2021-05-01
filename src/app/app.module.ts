@@ -4,19 +4,17 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { LoadingSpinnerComponent } from './loading-spinner/loading-spinner.component';
 import { ActionItemComponent } from './action-item/action-item.component';
-import { LinkedElementDropdownComponent } from './linked-element-dropdown/linked-element-dropdown.component';
+import { ToggleElementComponent } from './toggle-element/toggle-element.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoadingSpinnerComponent,
     ActionItemComponent,
-    LinkedElementDropdownComponent
+    ToggleElementComponent,
   ],
-  imports: [
-    BrowserModule
-  ],
+  imports: [BrowserModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
