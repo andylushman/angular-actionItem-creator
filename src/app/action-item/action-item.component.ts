@@ -19,6 +19,11 @@ export class ActionItemComponent implements OnInit {
     this.detailsValue = this.item.details;
   }
 
+  ngOnChanges(): void {
+    this.titleValue = this.item.title;
+    this.detailsValue = this.item.details;
+  }
+
   updateActionItem(id: string, actionItem: ActionItem): void {
     const updatedActionItem = { ...actionItem };
     updatedActionItem.title = this.titleValue;
