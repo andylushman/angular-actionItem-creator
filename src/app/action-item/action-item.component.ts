@@ -10,6 +10,7 @@ export class ActionItemComponent implements OnInit {
   @Input() item: ActionItem;
   titleValue: string;
   detailsValue: string;
+  showDeleteButton: boolean = true;
 
   constructor(public actionItems: ActionItemsService) {}
 
@@ -24,5 +25,24 @@ export class ActionItemComponent implements OnInit {
     updatedActionItem.details = this.detailsValue;
 
     this.actionItems.updateActionItem(id, updatedActionItem);
+    this.showDeleteButton = true;
+  }
+
+  deleteActionItem(id: string): void {
+    this.actionItems.deleteActionItem(id);
+  }
+
+  cancelUpdate(): void {
+    this.titleValue = this.item.title;
+    this.detailsValue = this.item.details;
+    this.showDeleteButton = true;
+  }
+
+  onKeyupTitle(event, actionItem: ActionItem): void {
+    this.showDeleteButton = actionItem.title === event.target.innerText;
+  }
+
+  onKeyupDetails(event, actionItem: ActionItem): void {
+    this.showDeleteButton = actionItem.details === event.target.innerText;
   }
 }
