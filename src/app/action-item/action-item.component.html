@@ -1,31 +1,44 @@
-<div class="action-item" [ngClass]="{'action-item-status-open': item.status === 'open', 'action-item-status-done' : item.status === 'done', 'action-item-status-discarded' : item.status === 'discarded' }">
+<div class="action-item" [ngClass]="{
+    'action-item-status-open': item.status === 'open',
+    'action-item-status-done': item.status === 'done',
+    'action-item-status-discarded': item.status === 'discarded'
+  }">
   <div *ngIf="item.status === 'done'" class="action-item-status-icon action-item-status-icon-done">
-    <div class="action-item-status-icon-done-check">
-      &#x2713;
-    </div>
+    <div class="action-item-status-icon-done-check">&#x2713;</div>
   </div>
   <div *ngIf="item.status === 'discarded'" class="action-item-status-icon action-item-status-icon-discarded">
-   	&#10010;
+    &#10010;
   </div>
-  <h1 class="action-item-title" [textContent]="item.title" (input)="titleValue=$event.target.textContent" contenteditable (keyup)="onKeyupTitle($event)">
-    {{item.title}}
+  <h1 class="action-item-title" [textContent]="item.title" (input)="titleValue = $event.target.textContent"
+    contenteditable (keyup)="onKeyupTitle($event)">
+    {{ item.title }}
   </h1>
-  <div class="action-item-details" [textContent]="item.details" (input)="detailsValue=$event.target.textContent" contenteditable (keyup)="onKeyupDetails($event)">
-    {{item.details}}
+  <div class="action-item-details" [textContent]="item.details" (input)="detailsValue = $event.target.textContent"
+    contenteditable (keyup)="onKeyupDetails($event)">
+    {{ item.details }}
   </div>
   <div>
     <div class="action-item-responsible">Responsible</div>
-    <button *ngIf="item.assignee; else addAssignee" class="action-item-assignee">{{item.assignee.name}}</button>
+    <button *ngIf="item.assignee; else addAssignee" class="action-item-assignee">
+      {{ item.assignee.name }}
+    </button>
     <ng-template #addAssignee>
       <button class="action-item-add-assignee">Add Assignee</button>
     </ng-template>
   </div>
   <div *ngIf="item.linkedElements.length">
-    <app-toggle-element  *ngFor="let toggledElement of item.linkedElements"  [toggledElement]="toggledElement"></app-toggle-element>
+    <app-toggle-element *ngFor="let toggledElement of item.linkedElements" [toggledElement]="toggledElement">
+    </app-toggle-element>
   </div>
   <div class="action-item-buttons">
-    <button *ngIf="showDeleteButton" class="action-item-buttons-delete" (click)="deleteActionItem(item.id)">Delete</button>
-    <button *ngIf="!showDeleteButton" class="action-item-buttons-save" (click)="updateActionItem(item.id, item)">Save</button>
-    <button *ngIf="!showDeleteButton" class="action-item-buttons-cancel" (click)="cancelUpdate()">Cancel</button>
+    <button *ngIf="showDeleteButton" class="action-item-buttons-delete" (click)="deleteActionItem(item.id)">
+      Delete
+    </button>
+    <button *ngIf="!showDeleteButton" class="action-item-buttons-save" (click)="updateActionItem(item.id, item)">
+      Save
+    </button>
+    <button *ngIf="!showDeleteButton" class="action-item-buttons-cancel" (click)="cancelUpdate()">
+      Cancel
+    </button>
   </div>
 </div>
