@@ -100,5 +100,17 @@
     & button:hover {
       background: var(--color-hover-tint);
     }
+
+    & button:active {
+      background: var(--color-border-dark);
+    }
+
+    &-save {
+      color: var(--color-echometer-green);
+    }
+
+    &-cancel {
+      color: var(--color-red-700);
+    }
   }
 }
