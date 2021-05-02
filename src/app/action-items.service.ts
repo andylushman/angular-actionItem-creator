@@ -93,8 +93,6 @@ export class ActionItemsService {
   }
 
   deleteActionItem(id: string) {
-    console.log(id);
-
     this.updateActionItems(
       this.actionItems.filter((actionItem) => actionItem.id !== id)
     );
