@@ -42,10 +42,31 @@
 
   &-title {
     font-size: 24px;
+    border: none;
+    background: inherit;
+    width: 100%;
+    padding: 8px 8px 8px 2px;
+    &:hover {
+      background-color: var(--color-hover-tint);
+    }
+    &:focus {
+      border: 2px solid var(--color-background-furthest);
+      border-radius: 4px;
+      background-color: inherit;
+    }
   }
 
   &-details {
     margin: 24px 0;
+    padding: 8px 8px 8px 2px;
+    &:hover {
+      background-color: var(--color-hover-tint);
+    }
+    &:focus {
+      border: 2px solid var(--color-background-furthest);
+      border-radius: 4px;
+      background-color: inherit;
+    }
   }
 
   &-responsible {

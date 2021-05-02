@@ -7,9 +7,12 @@
   <div *ngIf="item.status === 'discarded'" class="action-item-status-icon action-item-status-icon-discarded">
    	&#10010;
   </div>
-  <h1 class="action-item-title">{{item.title}}</h1>
-  <div class="action-item-details">
-    {{item.details}}
+  <!-- <input class="action-item-title" (keyup)="onKey($event)" value="{{titleValue}}"> -->
+  <h1 class="action-item-title" [textContent]="titleValue" (input)="titleValue=$event.target.textContent" contenteditable>
+    {{titleValue}}
+  </h1>
+  <div class="action-item-details" [textContent]="detailsValue" (input)="detailsValue=$event.target.textContent" contenteditable>
+    {{detailsValue}}
   </div>
   <div>
     <div class="action-item-responsible">Responsible</div>

@@ -8,8 +8,13 @@ import { ActionItem, ActionItemsService } from '../action-items.service';
 })
 export class ActionItemComponent implements OnInit {
   @Input() item: ActionItem;
+  titleValue = '';
+  detailsValue = '';
 
   constructor(public actionItems: ActionItemsService) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.titleValue = this.item.title;
+    this.detailsValue = this.item.details;
+  }
 }
