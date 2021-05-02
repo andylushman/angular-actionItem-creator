@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ActionItem } from '../action-items.service';
+import { ActionItem, ActionItemsService } from '../action-items.service';
 
 @Component({
   selector: 'app-action-item',
@@ -9,7 +9,7 @@ import { ActionItem } from '../action-items.service';
 export class ActionItemComponent implements OnInit {
   @Input() item: ActionItem;
 
-  constructor() {}
+  constructor(public actionItems: ActionItemsService) {}
 
   ngOnInit(): void {}
 }

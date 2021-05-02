@@ -67,9 +67,17 @@
     background-color: var(--color-blue-600);
   }
 
-  &-delete-button {
-    margin-top: 16px;
-    width: 100%;
-    text-align: right;
+  &-buttons {
+    display: flex;
+    justify-content: flex-end;
+
+    & button {
+      margin-top: 16px;
+      padding: 8px;
+    }
+
+    & button:hover {
+      background: var(--color-hover-tint);
+    }
   }
 }

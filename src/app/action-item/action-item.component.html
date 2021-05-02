@@ -21,5 +21,7 @@
   <div *ngIf="item.linkedElements.length">
     <app-toggle-element  *ngFor="let toggledElement of item.linkedElements"  [toggledElement]="toggledElement"></app-toggle-element>
   </div>
-  <button class="action-item-delete-button">Delete</button>
+  <div class="action-item-buttons">
+    <button class="action-item-buttons-delete" (click)="actionItems.deleteActionItem(item.id)">Delete</button>
+  </div>
 </div>
