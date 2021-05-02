@@ -22,6 +22,7 @@ export class ActionItemComponent implements OnInit {
   ngOnChanges(): void {
     this.titleValue = this.item.title;
     this.detailsValue = this.item.details;
+    this.showDeleteButton = true;
   }
 
   updateActionItem(id: string, actionItem: ActionItem): void {
