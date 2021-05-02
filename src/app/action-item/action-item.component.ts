@@ -38,11 +38,13 @@ export class ActionItemComponent implements OnInit {
     this.showDeleteButton = true;
   }
 
-  onKeyupTitle(event, actionItem: ActionItem): void {
-    this.showDeleteButton = actionItem.title === event.target.innerText;
+  onKeyupTitle(event: { target: { value: string; innerText: string } }): void {
+    this.titleValue = event.target.innerText;
+    this.showDeleteButton = this.titleValue === this.item.title;
   }
 
-  onKeyupDetails(event, actionItem: ActionItem): void {
-    this.showDeleteButton = actionItem.details === event.target.innerText;
+  onKeyupDetails(event: { target: { innerText: string } }): void {
+    this.detailsValue = event.target.innerText;
+    this.showDeleteButton = this.detailsValue === this.item.details;
   }
 }
